@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClabTeamX</title>
+        <meta lang="en-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+      body {
+          position: relative; /* This makes the body a reference for absolute positioning */
+      }
+      #my-image {
+          position: absolute;
+          top: 310px;      /* 50px from the top of the body */
+          left: 155px;    /* 100px from the left of the body */
+          width: 40px;   /* Optional: set the image size */
+          height: 40px;   /* Optional: maintain aspect ratio */
+      }
+  </style>
+    <body style="background-image: url(hacker.png); background-repeat: no-repeat; background-position: center; height: device-hieght; height: 100vh; background-size: cover;">
+        <div style="text-align: center; color: white;">
+          <b id="1" style="color: white; font-size: 29px;">Welcome to my page!</b>
+          <br>
+          <b id="2" style="color: white; font-size: 29px;">Here, you will know who is ClabTeamX</b>
+          <br>
+          <br>
+          <a id="3" href="wic.html">
+            <button style="font-size: large; background-color: rgb(28, 192, 28); color: white; border-color: rgb(9, 255, 0); border-radius: 5px;">What is ClabTeamX</button>
+          </a>
+          <br>
+          <br>
+          <a id="4" href="mailto:ClabTeamX@gmail.com">
+            <button style="font-size: large; width:170px; border-radius: 5px; border-color: rgb(15, 167, 35); background-color: rgb(18, 212, 0);"><b>Contact Saif (email)</b></button>
+          </a>
+          <br>
+          <br>
+          <button onclick="twm()" id="5" style="border-radius: 6px; border-color: blue;"><b>White Mode</b></button>
+        </div>
+
+        <script>
+          function twm() {
+            const body = document.body;     
+            const button = document.getElementById("5");
+            const text1 = document.getElementById("1");
+            const text2 = document.getElementById("2");
+            const text3 = document.getElementById("3");
+            const text4 = document.getElementById("4");
+            const time = document.getElementById("6")
+
+            if (body.style.backgroundColor === 'black') {
+              // Switch to White Mode
+              body.style.backgroundColor = 'white';
+              body.style.color = 'black'; 
+              text1.style.color = 'black';
+              text2.style.color = 'black';
+              text3.style.color = 'black';
+              text3.style.backgroundColor = 'white';
+              text4.style.color = 'black';
+              button.style.backgroundColor = 'black';
+              button.style.color = 'white';
+              button.textContent = 'Black Mode';
+              time.style.color='black';
+              
+            } else {
+              // Switch to Black Mode
+              body.style.backgroundColor = 'black';
+              body.style.color = 'white';
+              text1.style.color = 'white';
+              text2.style.color = 'white';
+              text3.style.color = 'white';
+              text3.style.backgroundColor = 'black';
+              text4.style.color = 'white';
+              button.style.backgroundColor = 'blue';
+              button.style.color = 'white';
+              button.textContent = 'White Mode';
+              time.style.color='white';
+            }
+          }
+        </script>
+        <div id="6" style="text-align: center; margin-top: 20px; color: white;">
+            <b>Current Time: <span id="clock"></span></b>
+        </div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const time = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = time;
+            }
+            setInterval(updateClock, 1000); // Update every second
+            updateClock(); // Initial call
+        </script>
+         <script> function tta() {
+          var hidden = document.getElementById("10")
+          if (hidden.hidden === true) {
+            hidden.hidden = false
+          }
+          else {
+            hidden.hidden = true
+          }
+      }
+      
+        </script>
+        <div style="text-align: center;">
+          <button onclick="tta()" style="background-color: gray; color: white; border-radius: 5px; border-bottom-color: gray; border-right-color: gray ;"><b>need some more information?</b></button>
+        </div>  
+          
+        <p id="10" hidden style="color: white; text-align: center;">my name is Saif
+          <br> i am 13 years old (24/4/2012)
+          <br>i live in iraq
+          <br>i wanna make a hackers team (ClabTeamX)
+          <div style="text-align: center;">
+           <p style="color: white;">@ClabTeamX</p>
+          </div>       
+        <img id="my-image" src="telelogo.png" style="position: 100;">
+      </body>
+</html>
